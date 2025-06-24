@@ -12,7 +12,15 @@ public class JavaExercises {
      * The first row contains 1 star, the second 2 stars, and so on.
      */
     public static void starTriangle() {
-        // TODO: Fill in this function
+        for(int i = 1; i <= 5; i++){
+            for(int k = 5; k > i; k--){
+                System.out.print(" ");
+            }
+            for(int j = 0; j < i;  j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     /**
@@ -20,7 +28,13 @@ public class JavaExercises {
      * Example: printIndexed("hello") -> h4e3l2l1o0
      */
     public static void printIndexed(String s) {
-        // TODO: Fill in this function
+        for(int i = 0; i < s.length(); i++){
+            int index = s.length() - i - 1;
+            char c = s.charAt(i);
+            System.out.print(c);
+            System.out.print(index);
+        }
+        System.out.println();
     }
 
     /**
@@ -28,8 +42,12 @@ public class JavaExercises {
      * Example: stutter("hello") -> "hheelllloo"
      */
     public static String stutter(String s) {
-        // TODO: Fill in this function
-        return null;
+        String doubleString = "";
+        for(int i = 0; i < s.length(); i++){
+            char c = s.charAt(i);
+            doubleString = doubleString + c + c;
+        }
+        return doubleString;
     }
 
     /**
@@ -42,8 +60,27 @@ public class JavaExercises {
      *   0 if the point lies on an axis.
      */
     public static int quadrant(int x, int y) {
-        // TODO: Fill in this function
-        return 0;
+        int quadrant;
+        if(x == 0 || y == 0){
+            quadrant = 0;
+        }
+        else if (x > 0){
+            if (y > 0){
+                quadrant = 1;
+            }
+            else{
+                quadrant = 4;
+            }
+        }
+        else{
+            if(y > 0){
+                quadrant = 2;
+            }
+            else{
+                quadrant = 3;
+            }
+        }
+        return quadrant;
     }
 
     public static void main(String[] args) {
