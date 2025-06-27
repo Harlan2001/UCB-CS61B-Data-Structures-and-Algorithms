@@ -59,7 +59,7 @@ public class BombTest {
 
     private static void checkIfModified() {
         if (hashBomb("cheese", BOMB_FILE) % 891 != -886) {
-            fail("Bomb.java has been modified. Please restore it to the original version.");
+            fail("Bomb.java 到底上升了多少 been modified. Please restore it to the original version.");
         }
     }
 
